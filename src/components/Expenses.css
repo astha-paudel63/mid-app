@@ -1,0 +1,118 @@
+.products {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+.products .name {
+  flex-basis: 40%;
+  text-align: left;
+}
+.product-container {
+  width: 60%;
+  justify-content: space-between;
+}
+.products .edit button {
+  color: black;
+  background-color: rgba(39, 117, 170, 0.472);
+  border: 2px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.products .remove button {
+  color: black;
+  background-color: rgba(114, 12, 46, 0.514);
+  border: 2px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.products .name {
+  font-family: "Manrope", sans-serif;
+
+  font-family: "PT Sans Narrow", sans-serif;
+  background-color: rgba(51, 117, 96, 0.33);
+  text-align: left;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.products .price {
+  font-family: "Manrope", sans-serif;
+
+  font-family: "Press Start 2P", cursive;
+
+  font-family: "PT Sans Narrow", sans-serif;
+
+  font-family: "Special Elite", cursive;
+  padding-top: 10px;
+}
+.products .quantity {
+  font-family: "Manrope", sans-serif;
+
+  font-family: "Press Start 2P", cursive;
+
+  font-family: "PT Sans Narrow", sans-serif;
+
+  font-family: "Special Elite", cursive;
+  padding-top: 10px;
+}
+.products .edit {
+  text-align: left;
+}
+.total span {
+  padding-top: 70px;
+  padding-left: 140px;
+}
+.total-wapper {
+  width: 275px;
+  height: 17vh;
+  padding-top: 45px;
+}
+.total .total-name {
+  font-family: "Manrope", sans-serif;
+
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 20px;
+}
+.total .total-number {
+  font-family: "Manrope", sans-serif;
+
+  font-family: "Press Start 2P", cursive;
+
+  font-family: "PT Sans Narrow", sans-serif;
+
+  font-family: "Special Elite", cursive;
+}
+.total {
+  background-color: #73101054;
+}
+
+.add button {
+  color: black;
+  background-color: rgba(48, 103, 105, 0.342);
+  border: 2px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  
+}
+.cancel button {
+  color: black;
+  background-color: rgba(100, 6, 42, 0.425);
+  border: 2px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.add:hover{
+  background-color:rgba(55, 105, 48, 0.342);
+  margin-top: 10px;
+  border-radius: 4px;
+  border: 2px;
+  transition: 0.5s;
+  
+}
+.edit tooltip {
+  position: relative;
+  display: inline-block;
+}

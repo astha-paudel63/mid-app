@@ -1,0 +1,55 @@
+
+.bill {
+  text-align: center;
+}
+.body-wapper {
+  text-align: center;
+  background-color: rgb(199, 209, 197);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  width: 100%;
+}
+.entries-container {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.summary-wapper {
+  width: 20%;
+  align-self: flex-end;
+  margin-right: 200px;
+  background-color: #8aafa345;
+    border: 15px solid rgb(20 85 129 / 36%)
+}
+
+.summary {
+  width: 90%;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.summary > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.data .entries{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0px 15px 230px;
+}
+.entries-wapper{
+    background-color: #8aafa345;
+    border: 15px solid rgb(20 85 129 / 36%)}
+.entries{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px 15px 230px;
+
+
+}
