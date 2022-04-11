@@ -11,7 +11,8 @@ import { useLocation } from "react-router-dom";
 const Container = styled.div`
 display: flex;
 flex-direction: column;
-width: 20%;
+position: fixed;
+width: ${props => props.expanded ? "20%": "5%"};
 .link {
     text-decoration: none;
     margin: 10px 0;
@@ -39,6 +40,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 }
+transition: all 0.5s;
 `;
 
 const Sidebar = ({
@@ -48,26 +50,26 @@ const Sidebar = ({
 
 const location = useLocation();
 console.log(location, expanded, 'check location');
-    return (<Container>
+    return (<Container expanded={expanded}>
         <div id="side-header">
-            <h3>My mid app</h3>
+            {expanded && <h3>mid app</h3>}
             {expanded ? <AiOutlineMenu size={24} color={'pink'} onClick={e => onClickBurgerMenu(!expanded)} />:
-            <AiOutlineRight size={24} color={'pink'} onClick={e => onClickBurgerMenu(!expanded)}/>}
+            <AiOutlineRight size={30} color={'pink'} onClick={e => onClickBurgerMenu(!expanded)}/>}
         </div>
-        <NavLink to="/home">
-        <img src={`https://picsum.photos/${expanded ? '200': '50'}`} alt="whaterver" />
+        <NavLink to="/home" title="hello">
+        <img className="App-logo" src={`https://picsum.photos/${expanded ? '200': '40/50'}`} alt="whaterver" />
         </NavLink>
-        <NavLink className="link" to="/home">
-           <FaHome /> <span>Home</span>
+        <NavLink className="link" to="/home" title="Back Home">
+           <FaHome size={expanded ? 20: 30} /> {expanded && <span>Home</span>}
         </NavLink>
-        <NavLink className="link" to="/basic">
-            <RiEmotionNormalLine /> <span>Basic</span>
+        <NavLink className="link" to="/basic" title="Basic List">
+            <RiEmotionNormalLine size={expanded ? 20: 30} /> {expanded ? <span>Basic</span>:null}
         </NavLink>
-        <NavLink className="link" to="/expenses">
-            <RiNewspaperLine /><span>Expenses</span>
+        <NavLink className="link" to="/expenses" title="Expenses">
+            <RiNewspaperLine size={expanded ? 20: 30} />{expanded && <span>Expenses</span>}
         </NavLink>
-        <NavLink className="link" to="/billing">
-            <RiBillFill /><span>Billing</span>
+        <NavLink className="link" to="/billing" title="Billing List">
+            <RiBillFill size={expanded ? 20: 30} />{expanded && <span>Billing</span>}
         </NavLink>
     </Container>)
 };

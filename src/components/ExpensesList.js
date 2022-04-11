@@ -141,7 +141,7 @@ function ExpensesList() {
     }
   }, []);
   return (
-    <div className="App">
+    <div className="page">
       <h1>Expenses</h1>
       <div className="product-container">
         {expenses.map((car) => (

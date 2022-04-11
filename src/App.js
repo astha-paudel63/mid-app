@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <Sidebar expanded={sidebarExpanded} onClickBurgerMenu={setSidebarExpanded} />
-      <div className="content expanded">
+      <div className={`content ${sidebarExpanded ? 'expanded':'contracted'}`}>
       <div className="navigation-header">
         <div className="welcome">
           {/* <Link to="/">
