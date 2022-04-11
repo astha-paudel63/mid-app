@@ -1,6 +1,6 @@
 .counter{
-  width:100%;
-  height:98vh;
+  /* width:100%; */
+  /* height:98vh; */
 }
 .counter-wapper h1{
   padding-top: 100px;
@@ -56,7 +56,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 120px 2px;
+    /* margin: 120px 2px; */
     cursor: pointer;
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
@@ -79,6 +79,6 @@
     }
     .count{
       display: flex;
-    margin-left:688px;
+    /* margin-left:688px; */
     
     }

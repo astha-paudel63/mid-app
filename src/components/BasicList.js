@@ -171,7 +171,7 @@ function BasicList({
     }
   }, []);
   return (
-    <div className="App">
+    <div className="page">
       <h1>{name}</h1>
       <h1>{location}</h1>
       <h1>{latitude}' North</h1>

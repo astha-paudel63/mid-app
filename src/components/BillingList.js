@@ -3,6 +3,7 @@ import ReactSelect from "react-select";
 import "./billing.css";
 import { MdEditNote } from "react-icons/md";
 import { MdOutlineDeleteSweep  } from "react-icons/md";
+import Counter from "./Counter";
 
 
 const BillingList = () => {
@@ -215,6 +216,7 @@ const BillingList = () => {
             ref={quantityInputRef}
             onKeyPress={handelproductquantity}
           />
+          <Counter initialValue={quantity} onChange={setQuantity} />
         </div>
         <div className="add">
           <button

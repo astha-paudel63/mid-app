@@ -1,5 +1,19 @@
 .App {
   text-align: center;
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content.contracted {
+  width: 100%;
+}
+
+.content.expanded {
+  width: 80%;
 }
 
 .App-logo {
