@@ -35,14 +35,14 @@ function App() {
       <ThemeProvider>
       <Sidebar expanded={sidebarExpanded} onClickBurgerMenu={setSidebarExpanded} />
       <div className={`content ${sidebarExpanded ? 'expanded':'contracted'}`}>
-      <div className="navigation-header">
-        <div className="welcome">
+      {/* <div className="navigation-header">
+        <div className="welcome"> */}
           {/* <Link to="/">
             <h1>welcome to my first app</h1>
           </Link> */}
-        </div>
+        {/* </div> */}
         {/* <h1>Welcome to React Router!</h1> */}
-        <div className="navigation">
+        {/* <div className="navigation">
           <div className="billing">
             <div title="B">
               <Link
@@ -63,8 +63,8 @@ function App() {
           <div className="basic">
             <div title="B">
               <Link
-                to="/basic"
-                // onMouseEnter={(e) => setHovered("basic")}
+                to="/basic" */}
+                {/* // onMouseEnter={(e) => setHovered("basic")}
                 // onMouseLeave={(e) => setHovered("")}
                 onMouseEnter={(e) => setHoveredList([...hoveredList, 'basic'])}
               >
@@ -114,7 +114,7 @@ function App() {
           </div>
         </div>
         
-      </div>
+      </div> */}
       <Routes>
           <Route
             path="/"

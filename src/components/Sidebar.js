@@ -6,7 +6,10 @@ import { FaHome } from "react-icons/fa";
 import { RiBillFill } from "react-icons/ri";
 import { RiEmotionNormalLine } from "react-icons/ri";
 import { RiNewspaperLine } from "react-icons/ri";
+import { AiFillSetting } from "react-icons/ai";
 import { useLocation } from "react-router-dom";
+import logo1 from '../pic/logo1.gif';
+import logo2 from '../pic/logo2.gif';
 
 const Container = styled.div`
 display: flex;
@@ -22,16 +25,16 @@ width: ${props => props.expanded ? "20%": "5%"};
     transition: all 0.5s;
     span {
         margin-left: 10px;
+        color: #000000;
     }
     &:hover {
         background-color: #00000023;
     }
 }
 .active {
-    background-color: #009845;
     color: #ffffff;
     &:hover {
-        background-color: #009845af;
+        background-color: #008a9854;
     }
 }
 
@@ -57,22 +60,22 @@ console.log(location, expanded, 'check location');
             <AiOutlineRight size={30} color={'pink'} onClick={e => onClickBurgerMenu(!expanded)}/>}
         </div>
         <NavLink to="/home" title="hello">
-        <img className="App-logo" src={`https://picsum.photos/${expanded ? '200': '40/50'}`} alt="whaterver" />
+        <img className="App-logo" src={expanded ?logo1:logo2} alt="whaterver" />
         </NavLink>
         <NavLink className="link" to="/home" title="Back Home">
-           <FaHome size={expanded ? 20: 30} /> {expanded && <span>Home</span>}
+           <FaHome color={"black"} size={expanded ? 20: 30} /> {expanded && <span>Home</span>}
         </NavLink>
         <NavLink className="link" to="/basic" title="Basic List">
-            <RiEmotionNormalLine size={expanded ? 20: 30} /> {expanded ? <span>Basic</span>:null}
+            <RiEmotionNormalLine color={"black"} size={expanded ? 20: 30} /> {expanded ? <span>Basic</span>:null}
         </NavLink>
         <NavLink className="link" to="/expenses" title="Expenses">
-            <RiNewspaperLine size={expanded ? 20: 30} />{expanded && <span>Expenses</span>}
+            <RiNewspaperLine  color={"black"} size={expanded ? 20: 30} />{expanded && <span>Expenses</span>}
         </NavLink>
         <NavLink className="link" to="/billing" title="Billing List">
-            <RiBillFill size={expanded ? 20: 30} />{expanded && <span>Billing</span>}
+            <RiBillFill color={"black"} size={expanded ? 20: 30} />{expanded && <span>Billing</span>}
         </NavLink>
         <NavLink className="link" to="/Settings" title="Settings">
-            <RiBillFill size={expanded ? 20: 30} />{expanded && <span>Settings</span>}
+            <AiFillSetting color={"black"} size={expanded ? 20: 30} />{expanded && <span>Settings</span>}
         </NavLink>
     </Container>)
 };
