@@ -5,11 +5,12 @@ import { cssTransition } from "react-toastify";
 // import "./modal.css";
 import "./App.css";
 import Counter from "./components/Counter";
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { isElementOfType } from "react-dom/test-utils";
 import { useEffect, useRef, Fragment } from "react";
 import ExpensesList from "./components/ExpensesList";
 import BasicList from "./components/BasicList";
+import Settings from "./components/Settings";
 import BillingList from "./components/BillingList";
 import { FaHome } from "react-icons/fa";
 import { RiBillFill } from "react-icons/ri";
@@ -18,6 +19,8 @@ import { RiNewspaperLine } from "react-icons/ri";
 
 import { Routes, Route, Link } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
+import { Provider } from "./context/usercontext";
+import { Provider as ThemeProvider } from "./context/themecontext";
 
 function App() {
   const [selected, setSelected] = useState("basicc"); //control by setSelected
@@ -28,6 +31,8 @@ function App() {
 
   return (
     <div className="App">
+      <Provider>
+      <ThemeProvider>
       <Sidebar expanded={sidebarExpanded} onClickBurgerMenu={setSidebarExpanded} />
       <div className={`content ${sidebarExpanded ? 'expanded':'contracted'}`}>
       <div className="navigation-header">
@@ -143,9 +148,12 @@ function App() {
           />
           <Route path="billing" element={<BillingList />} />
           <Route path="expenses" element={<ExpensesList />} />
+          <Route path="Settings" element={<Settings />} />
           <Route path="*" element={<Counter />} />
         </Routes>
     </div>
+    </ThemeProvider>
+    </Provider>
     </div>
   );
 }

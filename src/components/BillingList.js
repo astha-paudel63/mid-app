@@ -1,9 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import ReactSelect from "react-select";
 import "./billing.css";
 import { MdEditNote } from "react-icons/md";
 import { MdOutlineDeleteSweep  } from "react-icons/md";
 import Counter from "./Counter";
+import { Context } from "../context/usercontext";
 
 
 const BillingList = () => {
@@ -19,6 +20,7 @@ const BillingList = () => {
   const productInputRef = useRef(null);
   const quantityInputRef = useRef(null);
   const enterInputRef = useRef(null);
+  const data = useContext(Context);
 
   useEffect(() => {
     const productsRecorded = JSON.parse(localStorage.getItem("products"));
@@ -192,7 +194,6 @@ const BillingList = () => {
               </option>
             ))}
           </select> */}
-          <></>
           <h3> Product Name</h3>
           <ReactSelect
             options={products.map((p) => ({
@@ -250,6 +251,13 @@ const BillingList = () => {
         <button onClick={(e) => setEdit(false)}>cancel</button>
       ) : null}
       </div>
+      <div>
+          <span>Prepared By:</span>
+          <span>
+            {" "}
+            {data.firstName} {data.lastName}
+          </span>
+        </div>
     </div>
   );
 };
