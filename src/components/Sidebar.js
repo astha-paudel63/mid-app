@@ -71,6 +71,9 @@ console.log(location, expanded, 'check location');
         <NavLink className="link" to="/billing" title="Billing List">
             <RiBillFill size={expanded ? 20: 30} />{expanded && <span>Billing</span>}
         </NavLink>
+        <NavLink className="link" to="/Settings" title="Settings">
+            <RiBillFill size={expanded ? 20: 30} />{expanded && <span>Settings</span>}
+        </NavLink>
     </Container>)
 };
 
